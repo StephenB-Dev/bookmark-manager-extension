@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Bookmark Manager</h1>
+        <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div id="add-bookmark">
+            <input type="text" id="bookmark-title" placeholder="Bookmark Title">
+            <input type="text" id="bookmark-url" placeholder="Bookmark URL">
+            <select id="bookmark-category">
+                <option value="general">General</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+            <button id="auto-fill-button">Auto Fill URL</button>
+            <button id="add-button">Add Bookmark</button>
+        </div>
+        <div id="search-sort">
+            <input type="text" id="search-input" placeholder="Search Bookmarks">
+            <button id="sort-button">Sort A-Z</button>
+            <select id="sort-category-select">
+                <option value="all">All Categories</option>
+                <option value="general">General</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div id="bookmarks-list">
+            <ul id="bookmarks"></ul>
+        </div>
+    </div>
+
+    <!-- Edit Bookmark Modal -->
+    <div id="edit-bookmark-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Edit Bookmark</h2>
+            <input type="text" id="edit-bookmark-title" placeholder="Bookmark Title">
+            <input type="text" id="edit-bookmark-url" placeholder="Bookmark URL">
+            <button id="save-changes-button">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

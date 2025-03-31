@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Bookmark Manager",
+    "version": "1.0",
+    "description": "A simple bookmark manager extension. Manage all of your bookmarks with a clean popup interface. Bookmark icons created by Lagot Design - Flaticon https://www.flaticon.com/free-icons/bookmark",
+    "permissions": [
+        "storage",
+        "tabs",
+        "windows",
+        "bookmarks"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "32": "icons/icon32.png",
+            "64": "icons/icon64.png",
+            "128": "icons/icon128.png"
+        },
+        "default_title": "Bookmark Manager"
+    },
+    "icons": {
+        "32": "icons/icon32.png",
+        "64": "icons/icon64.png",
+        "128": "icons/icon128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
