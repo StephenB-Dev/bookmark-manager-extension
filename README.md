@@ -5,4 +5,4 @@
  This project is for portfolio purposes only. You are welcome to explore the code and test the extension, but please do not modify, or distribute it without permission.
  
 # Installation 
- Installation instructions for the extension can be found [here](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/).
+ Installation instructions for the extension can be found [here](https://devdiggers.com/how-to-load-an-unpacked-chrome-extension/).
