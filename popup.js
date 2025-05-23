@@ -22,10 +22,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function toggleTheme() {
         const body = document.body;
+        const modal = document.getElementsByClassName('modal-content');
         const isDarkTheme = body.classList.toggle('dark-theme');
-        const theme = isDarkTheme ? 'dark-theme' : 'light-theme';
         body.classList.toggle('light-theme', !isDarkTheme);
 
+        Array.from(modal).forEach(function(modal) {
+            modal.classList.toggle('dark-theme', isDarkTheme);
+            modal.classList.toggle('light-theme', !isDarkTheme);
+        });
+
+        const theme = isDarkTheme ? 'dark-theme' : 'light-theme';
         chrome.storage.sync.set({ theme: theme });
     }
 

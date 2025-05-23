@@ -1,5 +1,5 @@
 /* Dark theme variables */
-body.dark-theme {
+body.dark-theme, .modal.dark-theme {
     --bg-color: #2c2c2c;
     --text-color: #f1f1f1;
     --container-bg-color: #3c3c3c;
@@ -15,7 +15,7 @@ body.dark-theme {
 }
 
 /* Light theme variables */
-body.light-theme {
+body.light-theme, .model.light-theme {
     --bg-color: #f4f4f9;
     --text-color: #333;
     --container-bg-color: #fff;
@@ -218,7 +218,7 @@ input:checked + .slider:before {
 /* Bookmarks list styling */
 #bookmarks-list {
     width: 100%;
-    max-height: 420px; /* Increased max-height */
+    max-height: 420px;
     overflow-y: auto;
     border-top: 1px solid var(--border-color);
     padding-top: 10px;
@@ -243,7 +243,7 @@ input:checked + .slider:before {
     margin-bottom: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     height: 40px;
-    white-space: nowrap; /* Prevent text overflow */
+    white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -262,8 +262,9 @@ input:checked + .slider:before {
 
 /* Favicon styling */
 .favicon {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
     margin-right: 8px;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -273,7 +274,7 @@ input:checked + .slider:before {
 .category {
     font-size: 10px;
     color: var(--primary-color);
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Remove button styling */
@@ -285,8 +286,9 @@ input:checked + .slider:before {
     padding: 5px;
     cursor: pointer;
     font-size: 10px;
+    font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .remove-button:hover, .edit-button:hover {
@@ -306,9 +308,6 @@ input:checked + .slider:before {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -317,7 +316,8 @@ input:checked + .slider:before {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -327,15 +327,38 @@ input:checked + .slider:before {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
+.modal-content input {
+    padding: 5px 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    font-size: 12px;
+    width: calc(100% - 20px);
+    margin-bottom: 5px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+.modal-content button  {
+    padding: 5px 10px;
+    background-color: var(--button-bg-color);
+    color: var (--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 100px;
+}
+
 .close-button {
-    color: #aaa;
+    color: #ff0000;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close-button:hover,
-.close-button:focus {
+.close-button:hover, .close-button:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
